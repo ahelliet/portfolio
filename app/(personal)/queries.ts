@@ -82,10 +82,25 @@ export interface Settings {
 
 export interface Settings {
   menuItems?: Page[]
+  footer?: any[]
+}
+
+export interface Settings {
+  menuItems?: Page[]
+  footer?: any[]
+}
+
+export interface Settings {
+  menuItems?: Page[]
+  footer?: any[]
+}
+
+export interface Menu {
+  menuItems?: Page[]
 }
 
 export const settingsQuery = groq`
-*[_type == "settings"][0]{menuItems[]->{title, slug, content}, footer}
+*[_type == "settings"][0]{menuItems[]->{title, slug, content}, footer, footer}
 `
 
 export async function getSettings(
