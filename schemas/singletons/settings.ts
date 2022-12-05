@@ -1,10 +1,13 @@
 import { CogIcon } from '@sanity/icons'
-import { defineArrayMember, defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'settings',
   title: 'Settings',
+  name: 'settings',
+  title: 'Settings',
   type: 'document',
+  icon: CogIcon,
   icon: CogIcon,
   // Uncomment below to have edits publish automatically as you type
   // liveEdit: true,

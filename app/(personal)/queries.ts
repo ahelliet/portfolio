@@ -75,7 +75,12 @@ export interface Settings {
   footer?: any[]
 }
 
-export interface Menu {
+export interface Settings {
+  menuItems?: Page[]
+  footer?: any[]
+}
+
+export interface Settings {
   menuItems?: Page[]
 }
 
