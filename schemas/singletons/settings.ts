@@ -44,6 +44,22 @@ export default defineType({
       of: [
         defineArrayMember({
           type: 'block',
+          marks: {
+            annotations: [
+              {
+                name: 'link',
+                type: 'object',
+                title: 'Link',
+                fields: [
+                  {
+                    name: 'href',
+                    type: 'url',
+                    title: 'Url',
+                  },
+                ],
+              },
+            ],
+          },
         }),
       ],
     }),
