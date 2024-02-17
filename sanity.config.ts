@@ -28,6 +28,7 @@ import home from '@/sanity/schemas/singletons/home'
 import settings from '@/sanity/schemas/singletons/settings'
 
 import video from './sanity/schemas/documents/video';
+import { PlausibleTool } from './sanity/tools/plausibleTools';
 
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||
@@ -54,6 +55,9 @@ export default defineConfig({
       timeline,
     ],
   },
+    tools: [
+    PlausibleTool()
+  ],
   plugins: [
     dashboardTool({ widgets: []}),
     frFRLocale(),
