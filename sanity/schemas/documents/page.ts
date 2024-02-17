@@ -5,6 +5,7 @@ export default defineType({
   type: 'document',
   name: 'page',
   title: 'Page',
+  // @ts-expect-error
   icon: DocumentIcon,
   fields: [
     defineField({
@@ -86,6 +87,7 @@ export default defineType({
         }),
         defineField({
           type: 'image',
+          // @ts-expect-error
           icon: ImageIcon,
           name: 'image',
           title: 'Image',

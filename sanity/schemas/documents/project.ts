@@ -5,6 +5,7 @@ export default defineType({
   name: 'project',
   title: 'Project',
   type: 'document',
+  // @ts-expect-error
   icon: DocumentIcon,
   // Uncomment below to have edits publish automatically as you type
   // liveEdit: true,
@@ -123,6 +124,7 @@ export default defineType({
         }),
         defineField({
           type: 'image',
+          // @ts-expect-error
           icon: ImageIcon,
           name: 'image',
           title: 'Image',

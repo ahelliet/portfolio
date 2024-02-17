@@ -5,6 +5,7 @@ export default defineType({
   name: 'settings',
   title: 'Settings',
   type: 'document',
+  // @ts-expect-error
   icon: CogIcon,
   // Uncomment below to have edits publish automatically as you type
   // liveEdit: true,

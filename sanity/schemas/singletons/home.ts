@@ -5,6 +5,7 @@ export default defineType({
   name: 'home',
   title: 'Home',
   type: 'document',
+  // @ts-expect-error
   icon: HomeIcon,
   // Uncomment below to have edits publish automatically as you type
   // liveEdit: true,
