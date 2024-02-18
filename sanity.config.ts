@@ -3,6 +3,7 @@
  */
 
 import { assist } from '@sanity/assist'
+import { codeInput } from '@sanity/code-input'
 import { dashboardTool } from '@sanity/dashboard'
 import { frFRLocale } from '@sanity/locale-fr-fr'
 import { scheduledPublishing } from '@sanity/scheduled-publishing'
@@ -85,5 +86,6 @@ export default defineConfig({
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
     muxInput(),
+    codeInput(),
   ],
 })
