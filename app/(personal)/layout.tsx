@@ -8,7 +8,6 @@ import { Suspense } from 'react'
 
 import { Footer } from '@/components/global/Footer'
 import { Navbar } from '@/components/global/Navbar'
-import IntroTemplate from '@/intro-template'
 import { urlForOpenGraphImage } from '@/sanity/lib/utils'
 import { loadHomePage, loadSettings } from '@/sanity/loader/loadQuery'
 
@@ -22,13 +21,16 @@ export async function generateMetadata(): Promise<Metadata> {
     loadHomePage(),
   ])
 
+  const metadataBase = process.env.VERCEL_ENV === 'production' ? new URL(`https://${process.env.NEXT_PUBLIC_WEBSITE_URL}`) : new URL("http://localhost:3000")
+
   const ogImage = urlForOpenGraphImage(settings?.ogImage)
   return {
+    metadataBase,
     title: homePage?.title
       ? {
-          template: `%s | ${homePage.title}`,
-          default: homePage.title || 'Personal website',
-        }
+        template: `%s | ${homePage.title}`,
+        default: homePage.title || 'Personal website',
+      }
       : undefined,
     description: homePage?.overview
       ? toPlainText(homePage.overview)
@@ -59,9 +61,6 @@ export default async function IndexRoute({
         </div>
         <Suspense>
           <Footer />
-        </Suspense>
-        <Suspense>
-          <IntroTemplate />
         </Suspense>
       </div>
       {draftMode().isEnabled && <LiveVisualEditing />}
