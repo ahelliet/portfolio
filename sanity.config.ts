@@ -12,6 +12,7 @@ import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { presentationTool } from 'sanity/presentation'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
+import {IconManager} from 'sanity-plugin-icon-manager'
 import { media } from 'sanity-plugin-media'
 import { muxInput } from 'sanity-plugin-mux-input'
 
@@ -87,5 +88,8 @@ export default defineConfig({
     visionTool({ defaultApiVersion: apiVersion }),
     muxInput(),
     codeInput(),
+    IconManager({
+      inlineSvg: true,
+    }),
   ],
 })
