@@ -5,6 +5,7 @@
 import { assist } from '@sanity/assist'
 import { dashboardTool } from '@sanity/dashboard'
 import { frFRLocale } from '@sanity/locale-fr-fr'
+import { scheduledPublishing } from '@sanity/scheduled-publishing'
 import { visionTool } from '@sanity/vision'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
@@ -72,6 +73,7 @@ export default defineConfig({
       },
     }),
     media(),
+    scheduledPublishing(),
     // Configures the global "new document" button, and document actions, to suit the Settings document singleton
     singletonPlugin([home.name, settings.name, blog.name]),
     // Add an image asset source for Unsplash
