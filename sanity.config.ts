@@ -12,6 +12,7 @@ import { deskTool } from 'sanity/desk'
 import { presentationTool } from 'sanity/presentation'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
 import { media } from 'sanity-plugin-media'
+import { muxInput } from 'sanity-plugin-mux-input'
 
 import { apiVersion, dataset, projectId, studioUrl } from '@/sanity/lib/api'
 import { locate } from '@/sanity/plugins/locate'
@@ -25,6 +26,7 @@ import home from '@/sanity/schemas/singletons/home'
 import settings from '@/sanity/schemas/singletons/settings'
 
 import blogPost from './sanity/schemas/documents/blogPost'
+import video from './sanity/schemas/documents/video'
 import blog from './sanity/schemas/singletons/blog'
 import { PlausibleTool } from './sanity/tools/plausibleTools'
 
@@ -49,6 +51,7 @@ export default defineConfig({
       page,
       project,
       blogPost,
+      video,
       // Objects
       milestone,
       timeline,
@@ -81,5 +84,6 @@ export default defineConfig({
     // Vision lets you query your content with GROQ in the studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
+    muxInput(),
   ],
 })

@@ -36,6 +36,7 @@
     "sanity": "3.29.1",
     "sanity-plugin-asset-source-unsplash": "1.1.2",
     "sanity-plugin-media": "^2.2.5",
+    "sanity-plugin-mux-input": "^2.2.4",
     "server-only": "0.0.1",
     "styled-components": "6.1.8"
   },
