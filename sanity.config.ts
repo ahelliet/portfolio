@@ -19,6 +19,9 @@ import timeline from '@/sanity/schemas/objects/timeline'
 import home from '@/sanity/schemas/singletons/home'
 import settings from '@/sanity/schemas/singletons/settings'
 
+import blogPost from './sanity/schemas/documents/blogPost'
+import blog from './sanity/schemas/singletons/blog'
+
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||
   'Next.js Personal Website with Sanity.io'
@@ -34,10 +37,12 @@ export default defineConfig({
       // Singletons
       home,
       settings,
+      blog,
       // Documents
       duration,
       page,
       project,
+      blogPost,
       // Objects
       milestone,
       timeline,
@@ -45,7 +50,7 @@ export default defineConfig({
   },
   plugins: [
     deskTool({
-      structure: pageStructure([home, settings]),
+      structure: pageStructure([home, settings, blog]),
     }),
     presentationTool({
       locate,
@@ -56,7 +61,7 @@ export default defineConfig({
       },
     }),
     // Configures the global "new document" button, and document actions, to suit the Settings document singleton
-    singletonPlugin([home.name, settings.name]),
+    singletonPlugin([home.name, settings.name, blog.name]),
     // Add an image asset source for Unsplash
     unsplashImageAsset(),
     // Vision lets you query your content with GROQ in the studio

@@ -44,6 +44,12 @@ export interface PagePayload {
   slug?: string
 }
 
+export interface BlogPagePayload {
+  footer?: PortableTextBlock[]
+  overview?: PortableTextBlock[]
+  title?: string
+}
+
 export interface ProjectPayload {
   client?: string
   coverImage?: Image
@@ -57,6 +63,16 @@ export interface ProjectPayload {
   slug: string
   tags?: string[]
   title?: string
+}
+
+export interface BlogPostPayload {
+  coverImage?: Image
+  description?: PortableTextBlock[]
+  overview?: PortableTextBlock[]
+  slug: string
+  title?: string
+  views: number
+  readingTime: number
 }
 
 export interface SettingsPayload {
