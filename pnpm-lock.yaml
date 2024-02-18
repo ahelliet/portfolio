@@ -8,6 +8,9 @@ dependencies:
   '@portabletext/react':
     specifier: 3.0.11
     version: 3.0.11(react@18.2.0)
+  '@sanity/dashboard':
+    specifier: ^3.1.6
+    version: 3.1.6(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.29.1)(styled-components@6.1.8)
   '@sanity/demo':
     specifier: 1.0.2
     version: 1.0.2(@sanity/color@2.2.5)(tailwindcss@3.4.1)
@@ -1318,6 +1321,28 @@ packages:
     dependencies:
       '@sanity/client': 6.13.3
       async-cache-dedupe: 2.0.0
+    dev: false
+
+  /@sanity/dashboard@3.1.6(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.29.1)(styled-components@6.1.8):
+    resolution: {integrity: sha512-Ebz+K4h6bXN0xuj3EJylTMXc2O3WBU5rSimngJPuASXjYhOPRqOTQJcLT5lgQ/yxVN4U9CDN0JBmQDOrmFNXew==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: ^18
+      sanity: ^3
+      styled-components: ^5.2 || ^6.0.0
+    dependencies:
+      '@sanity/icons': 2.10.2(react@18.2.0)
+      '@sanity/image-url': 1.0.2
+      '@sanity/incompatible-plugin': 1.0.4(react-dom@18.2.0)(react@18.2.0)
+      '@sanity/ui': 1.9.3(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@6.1.8)
+      lodash: 4.17.21
+      react: 18.2.0
+      rxjs: 7.8.1
+      sanity: 3.29.1(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.8)
+      styled-components: 6.1.8(react-dom@18.2.0)(react@18.2.0)
+    transitivePeerDependencies:
+      - react-dom
+      - react-is
     dev: false
 
   /@sanity/demo@1.0.2(@sanity/color@2.2.5)(tailwindcss@3.4.1):

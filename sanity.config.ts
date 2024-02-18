@@ -2,6 +2,7 @@
  * This config is used to set up Sanity Studio that's mounted on the `app/studio/[[...index]]/Studio.tsx` route
  */
 
+import { dashboardTool } from '@sanity/dashboard'
 import { visionTool } from '@sanity/vision'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
@@ -49,6 +50,7 @@ export default defineConfig({
     ],
   },
   plugins: [
+    dashboardTool({ widgets: []}),
     deskTool({
       structure: pageStructure([home, settings, blog]),
     }),
