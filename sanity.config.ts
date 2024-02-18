@@ -23,6 +23,7 @@ import settings from '@/sanity/schemas/singletons/settings'
 
 import blogPost from './sanity/schemas/documents/blogPost'
 import blog from './sanity/schemas/singletons/blog'
+import { PlausibleTool } from './sanity/tools/plausibleTools'
 
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||
@@ -50,8 +51,11 @@ export default defineConfig({
       timeline,
     ],
   },
+  tools: [
+    PlausibleTool()
+  ],
   plugins: [
-    dashboardTool({ widgets: []}),
+    dashboardTool({ widgets: [] }),
     frFRLocale(),
     deskTool({
       structure: pageStructure([home, settings, blog]),
