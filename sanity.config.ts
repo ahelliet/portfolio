@@ -2,6 +2,7 @@
  * This config is used to set up Sanity Studio that's mounted on the `app/studio/[[...index]]/Studio.tsx` route
  */
 
+import { assist } from '@sanity/assist'
 import { dashboardTool } from '@sanity/dashboard'
 import { frFRLocale } from '@sanity/locale-fr-fr'
 import { visionTool } from '@sanity/vision'
@@ -57,6 +58,7 @@ export default defineConfig({
   plugins: [
     dashboardTool({ widgets: [] }),
     frFRLocale(),
+    assist(),
     deskTool({
       structure: pageStructure([home, settings, blog]),
     }),
