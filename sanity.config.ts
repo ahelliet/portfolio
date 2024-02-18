@@ -3,6 +3,7 @@
  */
 
 import { dashboardTool } from '@sanity/dashboard'
+import { frFRLocale } from '@sanity/locale-fr-fr'
 import { visionTool } from '@sanity/vision'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
@@ -51,6 +52,7 @@ export default defineConfig({
   },
   plugins: [
     dashboardTool({ widgets: []}),
+    frFRLocale(),
     deskTool({
       structure: pageStructure([home, settings, blog]),
     }),
